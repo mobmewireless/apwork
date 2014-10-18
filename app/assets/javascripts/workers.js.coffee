@@ -7,6 +7,7 @@ workers_initialization = ->
 	workers_datatable = $('.datatable')
 	
 	workers_datatable.dataTable
+    filter: false
 		pagingType: 'simple'
 		autoWidth: false
 		preDrawCallback: ->
@@ -21,12 +22,7 @@ workers_initialization = ->
 	  drawCallback: (oSettings) ->
 	    responsive_helper.respond()
 	    return
-			
-  workers_datatable_filter_input = $('#workers_datatable_filter input')
-  workers_datatable_filter_input.unbind()
-  workers_datatable_filter_input.bind 'keyup', (e) ->
-    if e.keyCode == 13
-      workers_datatable.fnFilter this.value
+
 
 $ -> workers_initialization()
 $(document).on('page:load', workers_initialization)
