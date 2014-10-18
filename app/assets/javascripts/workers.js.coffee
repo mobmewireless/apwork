@@ -7,12 +7,11 @@ workers_initialization = ->
 	workers_datatable = $('.datatable')
 	
 	workers_datatable.dataTable
-    filter: false
 		pagingType: 'simple'
 		autoWidth: false
 		preDrawCallback: ->
 			# Initialize the responsive datatables helper once.
-	    responsive_helper = new ResponsiveDatatablesHelper(workers_datatable, breakpoint_definition)  unless responsive_helper 
+	    responsive_helper = new ResponsiveDatatablesHelper(workers_datatable, breakpoint_definition) unless responsive_helper 
 	    return
 			
 		rowCallback: (nRow) ->
@@ -22,6 +21,14 @@ workers_initialization = ->
 	  drawCallback: (oSettings) ->
 	    responsive_helper.respond()
 	    return
+      
+    info: false
+    lengthChange: false
+    searching: true
+    language: {
+      search: ""
+      searchPlaceholder: "Search"
+    }
 
 
 $ -> workers_initialization()
