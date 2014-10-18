@@ -42,8 +42,7 @@ gem 'autoprefixer-rails'
 
 # Pretty tables!
 gem 'jquery-datatables-rails', git: 'https://github.com/rweng/jquery-datatables-rails.git'
-gem 'will_paginate'
-gem 'jquery-ui-rails'
+gem 'lodash-rails'
 
 # Use unicorn as the app server
 gem 'unicorn'
