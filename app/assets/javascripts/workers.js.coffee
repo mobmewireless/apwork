@@ -24,10 +24,13 @@ workers_initialization = ->
       
     info: false
     lengthChange: false
-    searching: true
     language: {
       search: ""
       searchPlaceholder: "Search"
+      paginate: {
+        next: ">"
+        previous: "<"
+      }
     }
 
 
