@@ -17,12 +17,10 @@
       <tr>
         <td><%= worker.name %></td>
         <td><%= worker.mobile %></td>
-        <td><%= worker.assigned_text %> at <%= worker.location %></td>
+        <td><%= worker.job.humanize %>, <%= worker.assigned_text %> at <%= worker.location %></td>
         <td>
-          <%= link_to t('.view', :default => t("helpers.links.view")),
-                      worker_path(worker), :class => 'btn btn-default btn-sm' %>
 					<%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_worker_path(worker), :class => 'btn btn-sm' %>
+                      edit_worker_path(worker), :class => 'btn btn-default btn-sm' %>
         </td>
       </tr>
     <% end %>
