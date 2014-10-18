@@ -39,14 +39,14 @@
   <div class="form-group">
     <%= f.label :job, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :job, :class => 'form-control' %>
+      <%= f.select :job, job_type_options, {}, :class => 'form-control' %>
     </div>
     <%=f.error_span(:job) %>
   </div>
   <div class="form-group">
     <%= f.label :assigned, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :assigned, :class => 'form-control' %>
+      <%= f.check_box :assigned, :class => 'form-control' %>
     </div>
     <%=f.error_span(:assigned) %>
   </div>
