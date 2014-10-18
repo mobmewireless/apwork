@@ -10,6 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
  */
 
 @import "bootstrap-sprockets";
@@ -20,4 +21,11 @@
 	@extend .has-error;
   display: inherit;
   background-color: inherit;
+}
+
+/* Datatables wrapper form controls need not use wrap.
+   This is to prevent the Page selector wrapping.
+*/
+.dataTables_wrapper .form-control {
+	display: inline;
 }
