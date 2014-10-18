@@ -11,9 +11,9 @@
   <dt><strong><%= model_class.human_attribute_name(:location) %>:</strong></dt>
   <dd><%= @worker.location %></dd>
   <dt><strong><%= model_class.human_attribute_name(:job) %>:</strong></dt>
-  <dd><%= @worker.job %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:assigned) %>:</strong></dt>
-  <dd><%= @worker.assigned %></dd>
+  <dd><%= @worker.job.humanize %></dd>
+  <dt><strong>Status:</strong></dt>
+  <dd><%= @worker.assigned_text %> at <%= @worker.location %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),

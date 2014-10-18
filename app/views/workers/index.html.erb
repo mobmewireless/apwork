@@ -7,7 +7,7 @@
     <tr>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:mobile) %></th>
-      <th><%= model_class.human_attribute_name(:assigned) %></th>
+      <th>Status</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -16,7 +16,7 @@
       <tr>
         <td><%= worker.name %></td>
         <td><%= worker.mobile %></td>
-        <td><%= worker.assigned %></td>
+        <td><%= worker.assigned_text %> at <%= worker.location %></td>
         <td>
           <%= link_to t('.view', :default => t("helpers.links.view")),
                       worker_path(worker), :class => 'btn btn-default btn-sm' %>
